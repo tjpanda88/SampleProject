@@ -11,4 +11,7 @@
 	<!-- jquery DataTable Editor 1.4.2 -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/vendor/DataTableEditor-1.4.2/css/dataTables.editor.min.css" type="text/css">
 
+    <!-- jquery DataTable TableTools 2.2.4 -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/vendor/DataTableTableTools-2.2.4/css/dataTables.tableTools.min.css" type="text/css">
+
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/app/css/dashboard.css" type="text/css">
