@@ -8,4 +8,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/vendor/bootstrap-3.3.4/css/jquery.dataTables.min.css" type="text/css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/vendor/bootstrap-3.3.4/css/jquery.dataTables_themeroller.css" type="text/css">
 
+	<!-- jquery DataTable Editor 1.4.2 -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/vendor/DataTableEditor-1.4.2/css/dataTables.editor.min.css" type="text/css">
+
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/app/css/dashboard.css" type="text/css">
