@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-	var editor = new $.fn.dataTable.Editor( {} );
+	//var editor = new $.fn.dataTable.Editor( {} );
 
-	new $.fn.dataTable.Editor( {
-	    ajax:  '/api/staff',
-	    table: '#staff',
+	var editor = new $.fn.dataTable.Editor( {
+	    ajax:  '/managerUser',
+	    table: '#manager_user_table',
 	    fields: [
 	        { label: 'First name', name: 'first_name' },
 	        { label: 'Last name',  name: 'last_name'  },
