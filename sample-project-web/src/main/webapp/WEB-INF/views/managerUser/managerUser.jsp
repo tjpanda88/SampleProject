@@ -9,92 +9,20 @@
 		<thead>
 			<tr>
 				<th>用户名</th>
-				<th>注册日期</th>
-				<th>角色</th>
 				<th>姓名</th>
-				<th>处理</th>
+				<th>角色</th>
+				<th>注册日期</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>A0001</td>
-				<td class="center">2015/05/01</td>
-				<td class="center">管理员</td>
-				<td class="center">张一</td>
-				<td class="center"><a class="btn btn-info" href="#"> <i
-						class="glyphicon glyphicon-edit icon-white"></i> 编辑用户
-				</a> <a class="btn btn-danger" href="#"> <i
-						class="glyphicon glyphicon-trash icon-white"></i> 删除用户
-				</a></td>
-			</tr>
-			<tr>
-				<td>A0001</td>
-				<td class="center">2015/05/01</td>
-				<td class="center">普通用户</td>
-				<td class="center">张二</td>
-				<td class="center"><a class="btn btn-info" href="#"> <i
-						class="glyphicon glyphicon-edit icon-white"></i> 编辑用户
-				</a> <a class="btn btn-danger" href="#"> <i
-						class="glyphicon glyphicon-trash icon-white"></i> 删除用户
-				</a></td>
-			</tr>
-			<tr>
-				<td>A0001</td>
-				<td class="center">2015/05/01</td>
-				<td class="center">普通用户</td>
-				<td class="center">张三</td>
-				<td class="center"><a class="btn btn-info" href="#"> <i
-						class="glyphicon glyphicon-edit icon-white"></i> 编辑用户
-				</a> <a class="btn btn-danger" href="#"> <i
-						class="glyphicon glyphicon-trash icon-white"></i> 删除用户
-				</a></td>
-			</tr>
-			<tr>
-				<td>A0001</td>
-				<td class="center">2015/05/01</td>
-				<td class="center">普通用户</td>
-				<td class="center">张四</td>
-				<td class="center"><a class="btn btn-info" href="#"> <i
-						class="glyphicon glyphicon-edit icon-white"></i> 编辑用户
-				</a> <a class="btn btn-danger" href="#"> <i
-						class="glyphicon glyphicon-trash icon-white"></i> 删除用户
-				</a></td>
-			</tr>
-			<tr>
-				<td>A0001</td>
-				<td class="center">2015/05/01</td>
-				<td class="center">普通用户</td>
-				<td class="center">张五</td>
-				<td class="center"><a class="btn btn-info" href="#"> <i
-						class="glyphicon glyphicon-edit icon-white"></i> 编辑用户
-				</a> <a class="btn btn-danger" href="#"> <i
-						class="glyphicon glyphicon-trash icon-white"></i> 删除用户
-				</a></td>
-			</tr>
-			<tr>
-				<td>A0001</td>
-				<td class="center">2015/05/01</td>
-				<td class="center">普通用户</td>
-				<td class="center">张六</td>
-				<td class="center"><a class="btn btn-info" href="#"> <i
-						class="glyphicon glyphicon-edit icon-white"></i> 编辑用户
-				</a> <a class="btn btn-danger" href="#"> <i
-						class="glyphicon glyphicon-trash icon-white"></i> 删除用户
-				</a></td>
-			</tr>
-			<tr>
-				<td>A0001</td>
-				<td class="center">2015/05/01</td>
-				<td class="center">管理员</td>
-				<td class="center">张三</td>
-				<td class="center"><a class="btn btn-info" href="#"> <i
-						class="glyphicon glyphicon-edit icon-white"></i> 编辑用户
-				</a> <a class="btn btn-danger" href="#"> <i
-						class="glyphicon glyphicon-trash icon-white"></i> 删除用户
-				</a></td>
-			</tr>
 		</tbody>
 	</table>
+
+	<a class="btn btn-info" href="#"> <i
+						class="glyphicon glyphicon-edit icon-white"></i> 编辑用户
+				</a> <a class="btn btn-danger" href="#"> <i
+						class="glyphicon glyphicon-trash icon-white"></i> 删除用户
+				</a>
 </div>
 
 <h2 class="sub-header">Section title</h2>

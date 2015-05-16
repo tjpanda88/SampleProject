@@ -9,7 +9,6 @@ $(document).ready(function() {
 	        { label: '用户名', name: 'id' },
 	        { label: '姓名',  name: 'name'  },
 	        { label: '权限',  name: 'roleId'  }
-	        // etc
 	    ]
 	} );
 
@@ -17,14 +16,10 @@ $(document).ready(function() {
 	    dom:  'Tfrtip',
 	    ajax: "/managerUser/load",
         columns: [
-            { data: null, render: function ( data, type, row ) {
-                // Combine the first and last names into a single table field
-                return "1";
-            } },
-            { data: "" },
-            { data: "roleId" },
+            { data: "id" },
             { data: "name" },
-            { data: "" }
+            { data: "roleId" },
+            { data: "registerDate" }
         ],
 	    tableTools: {
 	        sRowSelect: 'os',
