@@ -14,6 +14,17 @@ $(document).ready(function() {
 
 	$('#manager_user_table').DataTable( {
 	    dom:  'Tfrtip',
+	    ajax: "/managerUser/load",
+        columns: [
+            { data: null, render: function ( data, type, row ) {
+                // Combine the first and last names into a single table field
+                return "1";
+            } },
+            { data: "" },
+            { data: "type" },
+            { data: "name" },
+            { data: "" }
+        ],
 	    tableTools: {
 	        sRowSelect: 'os',
 	        aButtons: [
