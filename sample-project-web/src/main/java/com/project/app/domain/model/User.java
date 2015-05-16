@@ -25,7 +25,7 @@ public class User implements Serializable {
 
 	@NotNull
 	@Column(nullable = false, name = "USER_ROLE_ID", length = 2)
-	private String role_id;
+	private String roleId;
 
 	@NotNull
 	@Column(nullable = false, name = "USER_NAME", length = 30)

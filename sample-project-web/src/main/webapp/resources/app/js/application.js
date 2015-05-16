@@ -3,11 +3,12 @@ $(document).ready(function() {
 	//var editor = new $.fn.dataTable.Editor( {} );
 
 	var editor = new $.fn.dataTable.Editor( {
-	    ajax:  '/managerUser',
+		ajax: '/managerUser/edit',
 	    table: '#manager_user_table',
 	    fields: [
-	        { label: 'First name', name: 'first_name' },
-	        { label: 'Last name',  name: 'last_name'  },
+	        { label: '用户名', name: 'id' },
+	        { label: '姓名',  name: 'name'  },
+	        { label: '权限',  name: 'roleId'  }
 	        // etc
 	    ]
 	} );
@@ -21,7 +22,7 @@ $(document).ready(function() {
                 return "1";
             } },
             { data: "" },
-            { data: "type" },
+            { data: "roleId" },
             { data: "name" },
             { data: "" }
         ],
