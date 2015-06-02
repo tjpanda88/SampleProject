@@ -1,33 +1,50 @@
 $(document).ready(function() {
 
-	//var editor = new $.fn.dataTable.Editor( {} );
-
-	var editor = new $.fn.dataTable.Editor( {
-		ajax: '/managerUser/edit',
-	    table: '#manager_user_table',
-	    fields: [
-	        { label: '用户名', name: 'id' },
-	        { label: '姓名',  name: 'name'  },
-	        { label: '权限',  name: 'roleId'  }
-	    ]
-	} );
 
 	$('#manager_user_table').DataTable( {
-	    dom:  'Tfrtip',
-	    ajax: "/managerUser/load",
+	    ajax: "/managerUser?action=load",
         columns: [
             { data: "id" },
             { data: "name" },
             { data: "roleId" },
             { data: "registerDate" }
-        ],
-	    tableTools: {
-	        sRowSelect: 'os',
-	        aButtons: [
-	            { sExtends: 'editor_create', editor: editor },
-	            { sExtends: 'editor_edit',   editor: editor },
-	            { sExtends: 'editor_remove', editor: editor }
-	        ]
-	    }
+        ]
 	} );
+
+	$("#createUser").click(function(){
+		$('#manager_user_table_editor').modal('show');
+		$('.alert').hide();
+	})
+
+	$("#manager_user_table_editor_create").click(function(){
+		$.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/managerUser?action=create",
+            data: $('#manager_user_table_editor_form').serialize(),
+            success: function (result) {
+            	dataTableEditorCreate(result,"manager_user_table")
+            },
+            error: function(data) {
+                alert("error:"+data.responseText);
+             }
+        });
+	})
+
 } );
+
+function dataTableEditorCreate(resultObject, dataTableId) {
+	if(resultObject.fieldErrors != null) {
+		$.each(resultObject.fieldErrors, function(index,element){
+			var id = dataTableId + "_editor_form_" + element.name;
+			alert(id);
+			$("#" + id).text(element.status);
+			$("#" + id).show();
+		})
+	} else if(resultObject.row != null) {
+		$('#' + dataTableId).DataTable().row.add(resultObject.row).draw();
+
+		$('#'  + dataTableId + '_editor').modal('hide');
+
+	}
+}
