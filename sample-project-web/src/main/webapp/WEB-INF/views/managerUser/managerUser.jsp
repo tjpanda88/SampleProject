@@ -18,10 +18,12 @@
 		<tbody>
 		</tbody>
 	</table>
-<button type="button" id="createUser">Launch modal</button>
-	<a class="btn btn-info" href="#"> <i
+	<a class="btn btn-success" href="#" id="createUser"> <i
+						class="glyphicon glyphicon-edit icon-white"></i> 追加用户
+				</a>
+	<a class="btn btn-info" href="#" id="editUser"> <i
 						class="glyphicon glyphicon-edit icon-white"></i> 编辑用户
-				</a> <a class="btn btn-danger" href="#"> <i
+				</a> <a class="btn btn-danger" href="#" id="removeUser"> <i
 						class="glyphicon glyphicon-trash icon-white"></i> 删除用户
 				</a>
 </div>

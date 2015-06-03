@@ -52,17 +52,6 @@ public class ManagerUserController extends DataTablesBaseController<UserModel, U
 		return resultMap;
     }
 
-	@RequestMapping(value = "edit", method = RequestMethod.POST, params="action=remove")
-    public Map<String,Object> delete(@RequestParam(value="data[id]",required=false)String id,
-    		@RequestParam(value="data[name]",required=false)String name,
-    		@RequestParam(value="data[roleId]",required=false)String roleId)   {
-
-		userRepository.delete(id);
-		Map<String,Object> resultMap = new HashMap<>();
-		return resultMap;
-    }
-
-
 
 	@Override
 	protected User save(UserModel screenModel) {
@@ -70,5 +59,18 @@ public class ManagerUserController extends DataTablesBaseController<UserModel, U
 		User dataModel = mapper.map(screenModel, User.class);
 		dataModel.setRegisterDate(new Date());
 		return userRepository.save(dataModel);
+	}
+
+	@Override
+	protected User update(UserModel screenModel) {
+		Mapper mapper = new DozerBeanMapper();
+		User dataModel = mapper.map(screenModel, User.class);
+		dataModel.setRegisterDate(new Date());
+		return userRepository.save(dataModel);
+	}
+
+	@Override
+	protected void delete(UserModel screenModel) {
+		userRepository.delete(screenModel.getId());
 	}
 }

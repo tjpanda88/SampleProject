@@ -64,6 +64,34 @@ public abstract class DataTablesBaseController<S,D> {
 		return output;
 	}
 
+	@RequestMapping(method = RequestMethod.POST, params="action=edit")
+	public EditorOutputModel edit(EditorInputModel input) {
+		EditorOutputModel output = new EditorOutputModel();
+
+		S screenModel = map2Model(input.getData());
+
+		Set<ConstraintViolation<S>> screenModelValidatorResults = validationByScreenModel(screenModel);
+
+		if(!CollectionUtils.isEmpty(screenModelValidatorResults)) {
+			output.setFieldErrors(getFiledErrors(screenModelValidatorResults));
+			return output;
+		}
+
+		D dataModel = update(screenModel);
+		output.setRow(data2Screen(dataModel));
+		return output;
+	}
+
+	@RequestMapping(method = RequestMethod.POST, params="action=remove")
+	public EditorOutputModel remove(EditorInputModel input) {
+		EditorOutputModel output = new EditorOutputModel();
+
+		S screenModel = map2Model(input.getData());
+		delete(screenModel);
+		return output;
+	}
+
+
 
 	protected S data2Screen(D dataModel) {
 		Mapper mapper = new DozerBeanMapper();
@@ -96,4 +124,6 @@ public abstract class DataTablesBaseController<S,D> {
 	}
 
 	protected abstract D save(S screenModel);
+	protected abstract D update(S screenModel);
+	protected abstract void delete(S screenModel);
 }
