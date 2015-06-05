@@ -8,4 +8,5 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/vendor/DataTables-1.10.7/media/js/jquery.dataTables.min.js"></script>
 
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/app/js/application.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/app/js/datatableseditor.js"></script>
 

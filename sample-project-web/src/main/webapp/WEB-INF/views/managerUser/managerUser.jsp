@@ -18,12 +18,12 @@
 		<tbody>
 		</tbody>
 	</table>
-	<a class="btn btn-success" href="#" id="createUser"> <i
+	<a class="btn btn-success" href="#" dataTablesEditorRole="button" data-target="manager_user_table" data-action="create"> <i
 						class="glyphicon glyphicon-edit icon-white"></i> 追加用户
 				</a>
-	<a class="btn btn-info" href="#" id="editUser"> <i
+	<a class="btn btn-info" href="#" dataTablesEditorRole="button" data-target="manager_user_table" data-action="edit"> <i
 						class="glyphicon glyphicon-edit icon-white"></i> 编辑用户
-				</a> <a class="btn btn-danger" href="#" id="removeUser"> <i
+				</a> <a class="btn btn-danger" href="#" dataTablesEditorRole="button" data-target="manager_user_table" data-action="remove"> <i
 						class="glyphicon glyphicon-trash icon-white"></i> 删除用户
 				</a>
 </div>
